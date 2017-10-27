@@ -14,16 +14,34 @@ public class MyArrayList<T> {
 
     }
 
-    public void remove(int index){
-       // T [] tempArray = (T[])new Object [myArrayList.length-2];
-        //System.arraycopy();
+    public void remove(int index) {
+        if (index > myArrayList.length-1 || index < 0)
+            System.out.println("такого елемента в массиве нет. введите другой элемент");
+
+        else {
+            T[] tempArray = (T[]) new Object[myArrayList.length - 1];
+            System.arraycopy(myArrayList, 0, tempArray, 0, index);
+            System.arraycopy(myArrayList, index + 1, tempArray, index, myArrayList.length - index - 1);
+            myArrayList = tempArray;
+        }
     }
 
+    public void clear(){
+        for (int i = 0; i<myArrayList.length; i++)
+            myArrayList[i] = null;
+        }
+
+    public int size(){
+        return myArrayList.length;
+    }
+
+    public T get(int index){
+        return myArrayList[index];
+    }
 
     public void show(){
         for (T data:myArrayList) {
-            System.out.println(data);
-
+            System.out.print(data + "; ");
         }
     }
 
