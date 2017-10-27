@@ -1,9 +1,7 @@
-import java.util.ArrayList;
-
 public class MyArrayList<T> {
 
 
-    T [] myArrayList= (T[])new Object[0];
+    private T [] myArrayList= (T[])new Object[0];
 
     public void add(T varriable){
 
@@ -44,10 +42,4 @@ public class MyArrayList<T> {
             System.out.print(data + "; ");
         }
     }
-
-      public void ar() {
-          ArrayList<T> asd = new ArrayList();
-
-    }
-
 }
