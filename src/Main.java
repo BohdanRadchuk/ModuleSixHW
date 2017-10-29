@@ -1,7 +1,7 @@
 public class Main {
     public static void main(String[] args) {
 
-        MyArrayList myList = new MyArrayList();
+       /* MyArrayList myList = new MyArrayList();
         myList.add(1);
         myList.add(2);
         myList.add(3);
@@ -15,7 +15,10 @@ public class Main {
         myList.clear();
         myList.show();
         System.out.println();
-        System.out.println("list.size = " + myList.size());
+        System.out.println("list.size = " + myList.size());*/
+
+        MyLinkedList myLinkedList = new MyLinkedList(10);
+        myLinkedList.add(15);
 
     }
 }
