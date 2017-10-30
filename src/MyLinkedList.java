@@ -29,7 +29,7 @@ public class MyLinkedList<T> {
     public void add(T value){
 
         if (!(length==0)) {
-            Node prev = next;
+            prev = next;
             next = new Node(value, null, null);
             prev.next = next;
         }
@@ -41,7 +41,7 @@ public class MyLinkedList<T> {
     }
     public void show(){
         for(int i = 0; i<=length; i++)
-            System.out.println(next.data);
+            System.out.println(prev.data);
     }
 
 }
