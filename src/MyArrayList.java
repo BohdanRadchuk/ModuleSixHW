@@ -25,9 +25,11 @@ public class MyArrayList<T> {
     }
 
     public void clear(){
-        for (int i = 0; i<myArrayList.length; i++)
-            myArrayList[i] = null;
-        }
+        T[] tempArray = (T[])new Object[0];
+        myArrayList = tempArray;
+        /*for (int i = 0; i<myArrayList.length; i++)                        //не оптимальный в планепроизводительности
+            remove(i);
+        */}
 
     public int size(){
         return myArrayList.length;

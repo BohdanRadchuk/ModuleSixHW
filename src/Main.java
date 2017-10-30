@@ -17,8 +17,27 @@ public class Main {
         System.out.println();
         System.out.println("list.size = " + myList.size());*/
 
-        MyLinkedList myLinkedList = new MyLinkedList(10);
+        /*MyLinkedList myLinkedList = new MyLinkedList(10);
         myLinkedList.add(15);
+*/
+        /*Queue queue = new Queue();
+        queue.add(1);
+        queue.add(2);
+        queue.add(3);
+        queue.add(4);
+        queue.add(5);
+        queue.add(6);
+        queue.remove(3);
+        queue.show();
+        System.out.println();
+        System.out.println("размер очереди = " + queue.size());
+        System.out.println("peek element = " + queue.peek());
 
+        System.out.println("poll element 0 = " + queue.poll());
+        System.out.println("poll element 1 = " + queue.poll());
+        queue.show();
+
+        queue.clear();
+        queue.show();*/
     }
 }

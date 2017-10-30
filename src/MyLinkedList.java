@@ -1,7 +1,7 @@
 
 
 public class MyLinkedList<T> {
-    public T value= (String) 0;
+    public T value;
     T first;
     T last;
     public int length;
