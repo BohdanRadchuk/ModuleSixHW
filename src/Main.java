@@ -17,9 +17,12 @@ public class Main {
         System.out.println();
         System.out.println("list.size = " + myList.size());*/
 
-        /*MyLinkedList myLinkedList = new MyLinkedList(10);
+        MyLinkedList myLinkedList = new MyLinkedList();
         myLinkedList.add(15);
-*/
+        myLinkedList.add(2);
+        myLinkedList.add(4);
+        myLinkedList.show();
+
         /*Queue queue = new Queue();
         queue.add(1);
         queue.add(2);
@@ -35,7 +38,7 @@ public class Main {
         System.out.println("poll element 1 = " + queue.poll());
         queue.show();
         queue.clear();
-        queue.show();*/
+        queue.show();
         Stack stack = new Stack();
         stack.push(1);
         stack.push(2);
@@ -51,6 +54,6 @@ public class Main {
         System.out.println("poll one more element = " + stack.poll());
         stack.show();
         stack.clear();
-        stack.show();
+        stack.show();*/
     }
 }

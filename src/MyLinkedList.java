@@ -1,29 +1,49 @@
-
-
 public class MyLinkedList<T> {
-    public T value;
-    T first;
-    T last;
+
+
     public int length;
-    public MyLinkedList next;
-    public MyLinkedList current;
-    public MyLinkedList prev;
+    Node prev;
+    Node next;
 
-    public MyLinkedList(T value) {
-
-        current.value = value;
-
-       /* current.next = null;
-        current.prev = null;*/
-        this.length = 1;
-
+    public MyLinkedList() {
+        prev = null;
+        next = null;
+        length = 0;
     }
+
+
+    private class Node <T> {
+         T data;
+         Node<T> next;
+         Node<T> prev;
+
+        public Node(T data, Node<T> next, Node<T> prev) {
+            this.data = data;
+            this.next = next;
+            this.prev = prev;
+        }
+    }
+
+
+
     public void add(T value){
 
-        current.prev = current;
-        current.value = value;
-        current.next = null;
+        if (!(length==0)) {
+            Node prev = next;
+            next = new Node(value, null, null);
+            prev.next = next;
+        }
+        else {
+            next = new Node(value, null, next);
+            prev = next;
+        }
         length++;
-
     }
+    public void show(){
+        for(int i = 0; i<=length; i++)
+            System.out.println(next.data);
+    }
+
 }
+
+
