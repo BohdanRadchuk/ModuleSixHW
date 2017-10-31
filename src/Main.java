@@ -18,9 +18,15 @@ public class Main {
         System.out.println("list.size = " + myList.size());*/
 
         MyLinkedList myLinkedList = new MyLinkedList();
-        myLinkedList.add(15);
+        myLinkedList.add(1);
         myLinkedList.add(2);
+        myLinkedList.add(3);
         myLinkedList.add(4);
+        myLinkedList.add(5);
+
+        myLinkedList.remove(1);
+        myLinkedList.show();
+        myLinkedList.clear();
         myLinkedList.show();
 
         /*Queue queue = new Queue();
