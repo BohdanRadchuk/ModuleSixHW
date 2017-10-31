@@ -1,7 +1,7 @@
 public class Main {
     public static void main(String[] args) {
-
-       /* MyArrayList myList = new MyArrayList();
+        System.out.println("----------MyArrayList-------------");
+        MyArrayList myList = new MyArrayList();                       //arrayList example
         myList.add(1);
         myList.add(2);
         myList.add(3);
@@ -15,9 +15,11 @@ public class Main {
         myList.clear();
         myList.show();
         System.out.println();
-        System.out.println("list.size = " + myList.size());*/
-
-        MyLinkedList myLinkedList = new MyLinkedList();
+        System.out.println("list.size = " + myList.size());
+        
+        System.out.println();
+        System.out.println("----------MyLinkedList-------------");
+        MyLinkedList myLinkedList = new MyLinkedList();             //LinkedList example
         myLinkedList.add(1);
         myLinkedList.add(2);
         myLinkedList.add(3);
@@ -28,8 +30,9 @@ public class Main {
         myLinkedList.show();
         myLinkedList.clear();
         myLinkedList.show();
-
-        /*Queue queue = new Queue();
+        System.out.println();
+        System.out.println("----------MyQueue-------------");
+        Queue queue = new Queue();                                //Queue example
         queue.add(1);
         queue.add(2);
         queue.add(3);
@@ -45,7 +48,9 @@ public class Main {
         queue.show();
         queue.clear();
         queue.show();
-        Stack stack = new Stack();
+        System.out.println();
+        System.out.println("----------MyStack-------------");
+        Stack stack = new Stack();                                  //Stack example
         stack.push(1);
         stack.push(2);
         stack.push(3);
@@ -60,6 +65,23 @@ public class Main {
         System.out.println("poll one more element = " + stack.poll());
         stack.show();
         stack.clear();
-        stack.show();*/
+        stack.show();
+        System.out.println();
+        System.out.println("----------MyHashMap-------------");
+        MyHashMap<Integer, String> myHashMap = new MyHashMap<>();
+        myHashMap.put(1, "asd");
+        myHashMap.put(2, "asd1");
+        myHashMap.put(1, "asd2");
+        myHashMap.put(4, "asd3");
+        myHashMap.show();
+        System.out.println("выводим значение объекта с ключём 2 = "+ myHashMap.get(2));
+        myHashMap.remove(2);
+        myHashMap.show();
+
+        System.out.println("myHashMap.size = "+ myHashMap.size());
+        myHashMap.clear();
+        myHashMap.show();
+
+
     }
 }

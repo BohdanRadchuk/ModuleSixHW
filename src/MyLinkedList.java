@@ -38,12 +38,12 @@ public class MyLinkedList<T> {
 
     public void clear() {
 
-        for (Node<T> x = first; x != null; ) {
-            Node<T> next = x.next;
-            x.data = null;
-            x.next = null;
-            x.prev = null;
-            x = next;
+        for (Node<T> iterator = first; iterator != null; ) {
+            Node<T> next = iterator.next;
+            iterator.data = null;
+            iterator.next = null;
+            iterator.prev = null;
+            iterator = next;
         }
     }
 
