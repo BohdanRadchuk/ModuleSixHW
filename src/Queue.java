@@ -1,17 +1,19 @@
-public class Queue <T> {
-    private T [] myQueueArray = (T[])new Object[0];
+public class Queue<T> {
+    private T[] myQueueArray = (T[]) new Object[0];
 
     public Queue() {
 
     }
-    public void add (T value){
-        T [] tempArray = (T[])new Object [myQueueArray.length+1];                               //создаём временный массив размером на 1 больше
-        System.arraycopy(myQueueArray,0,tempArray,0, myQueueArray.length);      //копируем старый массив
+
+    public void add(T value) {
+        T[] tempArray = (T[]) new Object[myQueueArray.length + 1];                               //создаём временный массив размером на 1 больше
+        System.arraycopy(myQueueArray, 0, tempArray, 0, myQueueArray.length);      //копируем старый массив
         tempArray[myQueueArray.length] = value;                                                //присваиваем значение последнему элементу
         myQueueArray = tempArray;                                                              //перезаписываем наш массив на временнный(на 1 элемент больше)
     }
+
     public void remove(int index) {
-        if (index > myQueueArray.length-1 || index < 0)                                         //проверяем валидность элемента
+        if (index > myQueueArray.length - 1 || index < 0)                                         //проверяем валидность элемента
             System.out.println("такого елемента в массиве нет. введите другой элемент");
 
         else {
@@ -21,26 +23,29 @@ public class Queue <T> {
             myQueueArray = tempArray;                                                            // перезаписываем наш массив
         }
     }
-    public void clear(){
 
-        T[] tempArray = (T[])new Object[0];                                                     // создаём временный массив размером 0
+    public void clear() {
+
+        T[] tempArray = (T[]) new Object[0];                                                     // создаём временный массив размером 0
         myQueueArray = tempArray;
     }
-    public int size(){
+
+    public int size() {
         return myQueueArray.length;
     }
 
-    public T peek(){
+    public T peek() {
         return myQueueArray[0];         // возвращаем значение 0ого элемента
     }
 
-    public T poll(){
+    public T poll() {
         T val = peek();             //присваиваем временной переменной значение для возврата
         remove(0);            //удаляем 0ой элемент
         return val;
     }
-    public void show(){
-        for (T data:myQueueArray) {
+
+    public void show() {
+        for (T data : myQueueArray) {
             System.out.print(data + "; ");
         }
     }

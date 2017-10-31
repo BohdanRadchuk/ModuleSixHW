@@ -16,7 +16,7 @@ public class Main {
         myList.show();
         System.out.println();
         System.out.println("list.size = " + myList.size());
-        
+
         System.out.println();
         System.out.println("----------MyLinkedList-------------");
         MyLinkedList myLinkedList = new MyLinkedList();             //LinkedList example
@@ -74,11 +74,11 @@ public class Main {
         myHashMap.put(1, "asd2");
         myHashMap.put(4, "asd3");
         myHashMap.show();
-        System.out.println("выводим значение объекта с ключём 2 = "+ myHashMap.get(2));
+        System.out.println("выводим значение объекта с ключём 2 = " + myHashMap.get(2));
         myHashMap.remove(2);
         myHashMap.show();
 
-        System.out.println("myHashMap.size = "+ myHashMap.size());
+        System.out.println("myHashMap.size = " + myHashMap.size());
         myHashMap.clear();
         myHashMap.show();
 

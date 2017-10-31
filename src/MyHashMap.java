@@ -11,32 +11,28 @@ public class MyHashMap<K, T> {
     }
 
 
-
     public void put(K key, T value) {
 
-            if (length == 0) {
-                first = new Node<>(key, value, null);
-                next = first;
-            } else {
-                if (keySearchMatch(key).key!=key) {
-                    Node<K, T> node = new Node<>(key, value, null);
-                    next.next = node;
-                    next = node;
-                }
-                else System.out.println("this key is already used");
+        if (length == 0) {
+            first = new Node<>(key, value, null);
+            next = first;
+        } else {
+            if (keySearchMatch(key).key != key) {
+                Node<K, T> node = new Node<>(key, value, null);
+                next.next = node;
+                next = node;
+            } else System.out.println("this key is already used");
 
-            }
-            length++;
+        }
+        length++;
 
     }
 
 
+    public T get(K key) {
 
-
-    public T get (K key){
-
-        T searchData=null;
-        if (keySearchMatch(key).key==key)
+        T searchData = null;
+        if (keySearchMatch(key).key == key)
             searchData = keySearchMatch(key).data;
         else
             System.out.println("такого ключа нет.");
@@ -45,12 +41,12 @@ public class MyHashMap<K, T> {
         return searchData;
     }
 
-    public Node<K,T > keySearchMatch(K key){
+    public Node<K, T> keySearchMatch(K key) {
         Node<K, T> iterator = first;
-        Node<K,T> temp = iterator;
+        Node<K, T> temp = iterator;
 
         do {
-            if (iterator.key == key )
+            if (iterator.key == key)
                 temp = iterator;
 
 
@@ -67,7 +63,7 @@ public class MyHashMap<K, T> {
 
         for (Node<K, T> iterator = first; iterator != null; ) {
             Node<K, T> next = iterator.next;
-            if (iterator.key == key){
+            if (iterator.key == key) {
                 iterator.key = null;
                 iterator.data = null;
                 break;
