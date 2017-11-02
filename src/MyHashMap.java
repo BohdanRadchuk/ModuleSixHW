@@ -16,15 +16,18 @@ public class MyHashMap<K, T> {
         if (length == 0) {
             first = new Node<>(key, value, null);
             next = first;
+            length++;
         } else {
             if (keySearchMatch(key).key != key) {
                 Node<K, T> node = new Node<>(key, value, null);
                 next.next = node;
                 next = node;
-            } else System.out.println("this key is already used");
+                length++;
+            } else
+                System.out.println("this key is already used");
 
         }
-        length++;
+
 
     }
 
